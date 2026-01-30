@@ -5,7 +5,7 @@
 
 #Note: we do not recommend to change the catalog here as it won't impact all the demo resources such as SDP pipeline and Dashboards.
 #Instead, please re-install the demo with a specific catalog and schema using dbdemos.install("lakehouse-retail-c360", catalog="..", schema="...")
-catalog = "fevm_gcp_tps"
+catalog = "demo"
 schema = dbName = db = "dbdemos_pipeline_bike"
 parameters = dbutils.widgets.getAll()
 catalog = parameters.get("catalog", catalog)
