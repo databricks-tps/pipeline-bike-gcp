@@ -6,7 +6,7 @@
 #Note: we do not recommend to change the catalog here as it won't impact all the demo resources such as SDP pipeline and Dashboards.
 #Instead, please re-install the demo with a specific catalog and schema using dbdemos.install("lakehouse-retail-c360", catalog="..", schema="...")
 catalog = "demo"
-user = spark.sql("SELECT current_user() AS user").collect()[0]["user"]
+user = spark.sql("SELECT current_user() AS user").collect()[0]["user"].split("@")[0].replace(".", "-")
 schema = dbName = db = f"dbdemos_pipeline_bike_{user}"
 volume_name = "raw_data"
 
