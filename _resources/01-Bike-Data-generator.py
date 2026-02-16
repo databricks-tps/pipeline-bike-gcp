@@ -7,10 +7,6 @@
 #Instead, please re-install the demo with a specific catalog and schema using dbdemos.install("lakehouse-retail-c360", catalog="..", schema="...")
 catalog = spark.catalog.currentCatalog()
 schema = dbName = db = "dbdemos_pipeline_bike"
-parameters = dbutils.widgets.getAll()
-catalog = parameters.get("catalog", catalog)
-schema = dbName = db = parameters.get("schema", schema)
-
 volume_name = "raw_data"
 
 # COMMAND ----------
